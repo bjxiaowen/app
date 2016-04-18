@@ -6,15 +6,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
         http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd">
 
-	<mongo:mongo host="localhost" port="27017" id="mongo" >
-		 <mongo:options connections-per-host="4"
-	                   connect-timeout="1000"
-	                   max-wait-time="1500"
-	                   auto-connect-retry="true"
-	                   socket-keep-alive="true"
-	                   socket-timeout="1500"
-	                   write-fsync="true" />
-     </mongo:mongo>
+	<mongo:mongo host="localhost" port="27017" id="mongo" />
      
 	<mongo:db-factory dbname="mymgdb" mongo-ref="mongo" id="mongoDbFactory" />
  
